@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.manager {
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+
+.btn-ani {
+  width: 160px;
+  background-color: lightgreen;
+  padding: 10px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-ani .normal i {
+  padding: 6px;
+  border-left: 2px solid #70b070;
+}
+
+.animation-div {
+  opacity: 0;
+  display: none;
+}
+
+button .normal span {
+  padding: 6px;
+}
+
+.ani .animation-div {
+  opacity: 1;
+  display: inline-block;
+}
+
+.ani .normal {
+  animation: open 0.3s forwards;
+}
+
+@keyframes open {
+  from {
+    opacity: 1;
+    display: inline-block;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+    transform: translateY(-100%);
+  }
+}
+
+.ani .items-div {
+  animation: openItem 0.3s forwards;
+}
+
+@keyframes openItem {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes openBag {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.bag {
+  animation: openBag 0.3s forwards 0.5s;
+}
+
+@keyframes openCheck {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.ani .check-ani {
+  opacity: 0;
+  animation: openCheck 0.3s forwards 0.9s;
+  transform: translateY(-20px);
+}
